@@ -7,6 +7,12 @@
       font-family: "Poppins", sans-serif;
 }
 
+body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+}
+
 h1 {
       font-size: 64px;
 }
@@ -14,6 +20,47 @@ h1 {
 p {
       font-size: 36px;
 }
+
+.main-rps-cont {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      gap: 16px;
+}
+
+.main-rps-cont > .rps-containers > img {
+      width: 420px;
+      height: 420px;
+      /* outline: 2px solid black; */
+      border: 6px solid #000;
+      border-radius: 8px;
+}
+
+.main-rps-cont > .rps-containers:nth-child(1) > img {
+      background-color: #ff0000;
+}
+
+.main-rps-cont > .rps-containers:nth-child(2) > img {
+      background-color: #1b0bff;
+}
+
+.main-rps-cont > .rps-containers:nth-child(3) > img {
+      background-color: #15ff00;
+}
+
+.main-rps-cont {
+      margin: 60px 0;
+}
+
 button {
-      
+      background-color: #5a65ff;
+      color: #fff;
+      width: fit-content;
+      padding: 12px 24px;
+      border: none;
+      border-radius: 8px;
+      margin-top: 60px;
+      /* display: none; */
+      visibility: hidden;
 }
