@@ -45,5 +45,5 @@ const playGame = () => {
 }
 
 playGame();
-console.log(pScore, cScore)
+console.log(pScore, cScore);
 

@@ -32,7 +32,6 @@ p {
 .main-rps-cont > .rps-containers > img {
       width: 420px;
       height: 420px;
-      /* outline: 2px solid black; */
       border: 6px solid #000;
       border-radius: 8px;
 }
@@ -63,4 +62,8 @@ button {
       margin-top: 60px;
       /* display: none; */
       visibility: hidden;
+}
+
+.rps-containers:hover {
+      cursor: pointer;
 }
