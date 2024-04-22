@@ -21,6 +21,11 @@ p {
       font-size: 36px;
 }
 
+p.description {
+      font-size: 24px;
+      color: rgb(255, 0, 157);
+}
+
 .main-rps-cont {
       display: flex;
       justify-content: center;
@@ -52,7 +57,7 @@ p {
       margin: 60px 0;
 }
 
-button {
+/* button {
       background-color: #5a65ff;
       color: #fff;
       width: fit-content;
@@ -60,10 +65,18 @@ button {
       border: none;
       border-radius: 8px;
       margin-top: 60px;
-      /* display: none; */
+      display: none;
       visibility: hidden;
-}
+} */
 
 .rps-containers:hover {
       cursor: pointer;
+}
+
+/* To Be Continued */
+.finalResult {
+      background-color: rgba(189, 195, 199, 0.5);
+      display: flex;
+      justify-content: center;
+      align-items: center;
 }

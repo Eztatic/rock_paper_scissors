@@ -1,18 +1,20 @@
 let playerChoice = '';
 // playerChoice = playerChoice.toLowerCase();
-let computerChoice = undefined;
+let computerChoice = ['rock', 'paper', 'scissors'];
 let playerScore = 0;
 let computerScore = 0;
 let drawScore = 0;
+let randCompChoice;
 
 const getComputerChoice = () => {
-      computerChoice = Math.floor(Math.random() * 3) + 1;
-      if(computerChoice === 1){
-            return "rock";
-      }else if (computerChoice === 2){
-            return "paper";
-      }else if (computerChoice === 3){
-            return "scissors";
+      randCompChoice = Math.floor(Math.random() * 2.9);
+
+      if(randCompChoice === 0){
+            return computerChoice[randCompChoice];
+      }else if (randCompChoice === 1){
+            return computerChoice[randCompChoice];
+      }else if (randCompChoice === 2){
+            return computerChoice[randCompChoice];
       }
 }
 
@@ -34,7 +36,6 @@ const startRound = (playerSelection, computerSelection) => {
 //       // for(let i = 1; i <= 5; i++){
 //       //       startRound(playerChoice, getComputerChoice());
 //       // }
-//       startRound(playerChoice, getComputerChoice());
 //       if(playerScore > computerScore){
 //             return playerScore++;
 //       }else if(computerScore > playerScore){
@@ -45,6 +46,9 @@ const startRound = (playerSelection, computerSelection) => {
 // }
 
 const rpsContainer = document.querySelector('.main-rps-cont');
+const result = document.querySelector(".results");
+const description = document.querySelector(".description");
+
 rpsContainer.addEventListener('click', (event) => {
       let target = event.target;
       console.log(event.target);
@@ -62,12 +66,35 @@ rpsContainer.addEventListener('click', (event) => {
       }
       
       startRound(playerChoice, getComputerChoice());
+      console.log(randCompChoice);
 
-      const result = document.querySelector(".results");
+      description.textContent = `Player picked: ${playerChoice}, 
+                                 Computer picked: ${computerChoice[randCompChoice]}`
       result.textContent = `Player: ${playerScore}
                             Computer: ${computerScore}
                             Draw: ${drawScore}`;
+
+      setTimeout(function(){
+            if(playerScore >= 5){
+                  alert("Player Wins!!!");
+                  reset();
+            }else if(computerScore >= 5){
+                  alert("Computer Wins!!!");
+                  reset();
+            }
+      }, 300);
 });
+
+function reset() {
+      playerScore = 0;
+      computerScore = 0;
+      drawScore = 0;
+      result.textContent = '';
+      description.textContent = '';
+}     
+
+
+
 
 
 
